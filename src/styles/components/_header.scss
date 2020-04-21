@@ -1,0 +1,45 @@
+.header {
+    background: #fff;
+}
+.scroll {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    .header__logo{
+        width: 30%;
+        transition: width 0.5s ease;
+    }
+    transition: all 0.5s all;
+}
+
+.header__content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: $s-size 0;
+}
+
+.header__logo {
+    width: 50%;
+    margin: auto;
+    transition: width 0.5s ease;
+}
+
+.header__cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 30px;
+    }
+    span {
+        position: absolute;
+        align-self: flex-end;
+        font-size: $font-size-small;
+    }
+}
+
+.content-container--header {
+    margin: 0 auto;
+    padding: 0 $m-size;
+}

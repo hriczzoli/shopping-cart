@@ -1,0 +1,111 @@
+.cart__container {
+    position: fixed;
+    display: flex;
+    height: 100vh;
+    background: #fff;
+    width: 100vw;
+    right: -100%;
+    z-index: 2;
+    top: 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: right .7s all;
+    &.active {
+        right: 0;
+        position: absolute;
+        transition: right .7s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: scroll;
+        .product__container {
+            max-width: 80%;
+        }
+    }
+}
+
+.cart__logo__container {
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    background: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 40%
+    }
+}
+
+.cart__container__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: $s-size 3rem $s-size $m-size;
+    width: 100%;
+    margin: $m-size 0;
+    position: sticky;
+    top: 8%;
+    width: 100%;
+    margin-bottom: 5vh;
+    z-index: 2;
+    background: white;
+}
+
+.cart__container__header--info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.cart__container__products--scrollable {
+    padding: 2rem 2rem 5rem 2rem;
+}
+
+.cart__summary__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    height: 10vh;
+    padding: 0 2rem 12rem 2rem;
+    align-items: center;
+    background: white;
+    margin-top: auto;
+}
+
+.cart__summary--description {
+    display: flex;
+    width: 100%;
+    background: white;
+    color: black;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 7vh;
+}
+
+.cart__summary--checkout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    cursor: pointer;
+    width: 90%;
+    padding: $s-size;
+}
+
+@media (min-width: 500px) {
+    .cart__container {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 770px) {
+    .cart__container__header--info {
+        width: 40%;
+    }
+}

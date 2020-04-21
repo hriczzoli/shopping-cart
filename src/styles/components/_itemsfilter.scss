@@ -1,0 +1,38 @@
+.filters__container {
+    background: $off-white;
+    padding: $l-size $m-size;
+}
+
+.filter__header--text {
+    color: #757575;
+}
+
+.filter__button {
+    background: #f7f7f7;
+    padding: .5rem;
+    margin: 0 .5rem;
+    color: $green;
+    border-style: none;
+    &.active {
+        font-weight: bold;
+        border-bottom: 1px solid #009688;
+    }
+}
+
+.clear__button {
+    position: absolute;
+    right: 1rem;
+    padding-right: 3.2rem;
+    border: .5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem;
+    font-size: 1.4rem;
+}
+
+@media (min-width: 500px) {
+    .clear__button {
+        right: 3rem;
+    }
+}
