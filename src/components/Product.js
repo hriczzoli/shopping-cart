@@ -15,13 +15,11 @@ const Product = ({ product, addItemToCart, cart }) => {
         //Mapping over current state of the shopping cart
         cart.map((item) => {
             //Checking each items's ID against the product's ID that the component is rendering
-            if(item.id !== product.id){
-                //If it's not in the cart setting checked state to false/unchecked
-                setIsClicked(false)
-            } else {
-                //If it's a match we're setting checked state to true/checked
+            if(item.id === product.id){
                 setIsClicked(true)
             }
+            //Tried setting an ELSE clause here to remove 'checked' state from item after deleting from cart
+            //but doing that would only display 'checked' status for only one item at a time even if more would be in cart
         })
         //If the shopping cart is empty we are setting every component's checked state to false
         if(cart.length === 0) {
