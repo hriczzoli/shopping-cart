@@ -58,7 +58,6 @@ const CartProduct = ({ product, total, setTotal, dispatch }) => {
                 <span><strong>{product.title}</strong></span>
                 <span>{product.size} / {product.color}</span>
                 <div className="cart__product--description--counter">
-                    <span>{price} EUR</span>
                     <div>
                         <span 
                             className="counter--button"
@@ -72,6 +71,7 @@ const CartProduct = ({ product, total, setTotal, dispatch }) => {
                         >-
                         </span>
                     </div>
+                    <span>{price} EUR</span>
                 </div>
             </div>
         </div>

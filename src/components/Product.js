@@ -50,7 +50,7 @@ const Product = ({ product, addItemToCart, cart }) => {
                 </div>
             </div>
             <div className="product__container__bottom--details">
-                <span>{product.title} - {product.size}</span>
+                <span className="product__container__bottom--details--description">{product.title} - {product.size}</span>
                 <span>{product.color}</span>
             </div>
         </div>
